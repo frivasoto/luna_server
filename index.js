@@ -12,7 +12,6 @@ let objMulter = multer({ dest: "./public/upload" });
 app.use(objMulter.any());
 //app.use (objMulter.image());
 
-
 app.use(express.static("./public"));
 
 app.post("/api/reg", (req, res) => {
