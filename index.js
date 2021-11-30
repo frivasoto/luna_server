@@ -8,9 +8,10 @@ app.listen(8083, "localhost", () => {
     console.log("Ya estoy escuchando en el puerto 8083");
 });
 
-let objMulter = multer({ dest: "./public/upload" }); // Instantiate multer, el objeto de parámetro pasado, dest representa la ruta de almacenamiento del archivo cargado
-app.use(objMulter.any()); // cualquier significa cualquier tipo de archivo
-// app.use (objMulter.image ()) // Solo permite cargar tipos de imágenes
+let objMulter = multer({ dest: "./public/upload" });
+app.use(objMulter.any());
+//app.use (objMulter.image());
+
 
 app.use(express.static("./public"));
 
