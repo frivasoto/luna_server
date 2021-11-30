@@ -9,6 +9,7 @@ app.listen(8083, "localhost", () => {
     console.log("Ya estoy escuchando en el puerto 8083");
 });
 
+
 let objMulter = multer({ dest: "./public/upload" });
 app.use(objMulter.any());
 //app.use (objMulter.image());
